@@ -1,0 +1,39 @@
+.accordion {
+  background: #121212;
+  box-sizing: border-box;
+  color: #effeef;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1rem;
+
+  @media only screen and (max-width:768px) {
+    grid-template-columns: 1fr;
+    
+  }
+}
+
+.accordion_item {
+  padding: 1rem;
+  display:block;
+  box-sizing: border-box;
+  border: 1px solid;
+  align-self: flex-start;
+  background-color: lightgrey;
+  overflow: hidden;
+}
+
+.expanding_container{
+    display: grid;
+    grid-template-rows: .5fr;
+    transition: grid-template-rows .75s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.expanding_container > div{
+    overflow: hidden;
+}
+
+.expanded{
+    grid-template-rows: 1fr;
+
+}
